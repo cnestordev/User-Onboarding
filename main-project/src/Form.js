@@ -25,11 +25,23 @@ const Label = styled.label`
 `
 
 const Input = styled.input`
-    background: #000;
+    background: #fff;
     border: 1px solid #fff;
     border-radius: 3px;
-    color: #fff;
-    padding: 1.5% 2%;
+    box-shadow: 0 0 2px 1px #3e3e3e;
+    color: #000;
+    padding: 2%;
+    width: 50%;
+    margin: 1% auto;
+    font-size: 1rem;
+`
+
+const Checkbox = styled.input`
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #000;
+    padding: 2%;
     width: 50%;
     margin: 1% auto;
     font-size: 1rem;
@@ -62,7 +74,7 @@ function Form({ submit, change, check, disabled, data, errors }) {
                 </ErrorBox>
 
                 <Label htmlFor="tos">Terms of Service</Label>
-                <Input onChange={check} type="checkbox" checked={data.hasAcceptedTOS} id="tos" name="hasAcceptedTOS" value={!data.hasAcceptedTOS} />
+                <Checkbox onChange={check} type="checkbox" checked={data.hasAcceptedTOS} id="tos" name="hasAcceptedTOS" value={!data.hasAcceptedTOS} />
                 <Button disabled={disabled}>Submit</Button>
             </FormBox>
         </FormContainer>

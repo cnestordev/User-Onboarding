@@ -4,11 +4,11 @@ import styled from 'styled-components'
 const UserContainer = styled.div`
     border: 1px solid transparent;
     border-radius: 5px;
-    color: #181818;
+    color: #fff;
     text-align: center;
     padding: 2% 3%;
-    margin: 0 1%;
-    background: linear-gradient(to left, #a706ff, #0065ff);
+    margin: 1%;
+    background: #080808;
 `
 
 function User({ user }) {
