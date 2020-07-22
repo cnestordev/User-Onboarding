@@ -88,8 +88,13 @@ function App() {
   }
 
   const handleSubmit = e => {
-    e.preventDefault();
-    axios.post('https://reqres.in/api/users', formData)
+    e.preventDefault()
+    const user = {
+      ...formData,
+      name: formData.name.trim(),
+      email: formData.email.trim()
+    }
+    axios.post('https://reqres.in/api/users', user)
       .then(res => {
         console.log(res.data)
         setUsers([res.data, ...users])
@@ -102,7 +107,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello World</h1>
       <Form errors={formErrors} disabled={disabled} submit={handleSubmit} change={handleChange} check={handleCheck} data={formData} />
       <Users users={users} />
     </div>

@@ -1,10 +1,21 @@
 import React from 'react'
 import User from './User'
+import styled from 'styled-components'
+
+const Header = styled.h2`
+    text-align: center;
+`
+
+const Container = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2% 5%;
+`
 
 function Users({ users }) {
 
     if (users.length === 0) {
-        return <h2>No users have been added yet!</h2>
+        return <Header>No users have been added yet!</Header>
     }
 
     const userList = users.map(user => {
@@ -12,9 +23,9 @@ function Users({ users }) {
     })
 
     return (
-        <div>
+        <Container>
             {userList}
-        </div>
+        </Container>
     )
 }
 
