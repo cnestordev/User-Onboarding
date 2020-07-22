@@ -3,6 +3,7 @@ import User from './User'
 import styled from 'styled-components'
 
 const Header = styled.h2`
+    color: #fff;
     text-align: center;
 `
 

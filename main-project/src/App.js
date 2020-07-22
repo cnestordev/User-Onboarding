@@ -11,7 +11,8 @@ function App() {
     name: '',
     email: '',
     password: '',
-    hasAcceptedTOS: false
+    hasAcceptedTOS: false,
+    emoji: Math.floor(Math.random() * 91)
   }
 
   const formErrorState = {
