@@ -4,7 +4,8 @@ const formSchema = yup.object().shape({
     email: yup
         .string()
         .email("Email must be valid")
-        .required("Email is required"),
+        .required("Email is required")
+        .notOneOf(['waffle@syrup.com'], 'That email is already taken'),
     name: yup
         .string()
         .min(3, "First name must be at least 3 characters")
