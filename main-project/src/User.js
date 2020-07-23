@@ -9,7 +9,7 @@ const UserContainer = styled.div`
     text-align: center;
     padding: 2% 3%;
     margin: 1%;
-    background: #080808;
+    background: #1b1b1b;
 `
 
 const Emoji = styled.p`
